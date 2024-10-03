@@ -1,11 +1,14 @@
 
 
-let personalRank = calculateRank(45,13)
+let heroRank = calculatePoints(57,1)
 
-function calculateRank(wins, loses){
+
+// Função para calcular os pontos do heroi
+function calculatePoints(wins, loses){
     return discoverRank(wins-loses)
 }
 
+// Função com base nos pontos descobertos do herói defome sua classificação, retorna um vetor com primeiro elemento sendo os pontos(Number) e segundo sendo a classificação (String)
 function discoverRank(points){
     let rank = [points]
     if(points<=10){
@@ -28,4 +31,4 @@ function discoverRank(points){
     return rank
 }
 
-console.log(`O Herói tem de saldo de ${personalRank[0]} pontos e está no nível de ${personalRank[1]}`)
+console.log(`O Herói tem de saldo de ${heroRank[0]} pontos e está no nível de ${heroRank[1]}`)
